@@ -1,6 +1,5 @@
 import * as Vue from 'vue';
 import { createApp, ref } from 'vue';
-
 import { loadModule } from 'Vue3SfcLoader';
 
 const options = {
@@ -25,16 +24,13 @@ const options = {
 }
 
 const app = createApp({
-    // components: {
-    //     'my-component': Vue.defineAsyncComponent(() => loadModule('./components/myComponent.vue', options))
-    // },
     setup() {
         const message = ref('Hello Vue!');
         return {
             message
         };
     }
-})
+});
 
 app.component('my-component', Vue.defineAsyncComponent(() => loadModule('./components/myComponent.vue', options)));
 
