@@ -1,6 +1,7 @@
 import * as Vue from 'vue';
 import { createApp, ref } from 'vue';
 import { loadModule } from 'Vue3SfcLoader';
+import { serve } from './http.js';
 
 const options = {
     moduleCache: {
@@ -26,6 +27,8 @@ const options = {
 const app = createApp({
     setup() {
         const message = ref('Hello Vue!');
+        const res = serve.get('https://jsonplaceholder.typicode.com/users', {});
+        console.log('res: ', res);
         return {
             message
         };
