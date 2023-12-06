@@ -5,7 +5,7 @@ const config = {
     timeout: 150000
 };
 
-const serve = axios.create(config);
+export const serve = axios.create(config);
 
 // 請求攔截器
 serve.interceptors.request.use(
@@ -41,7 +41,3 @@ serve.interceptors.response.use(
     },
     error => message(error)
 );
-
-export { 
-    serve
-};

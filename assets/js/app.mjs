@@ -1,7 +1,7 @@
 import * as Vue from 'vue';
 import { createApp, ref } from 'vue';
 import { loadModule } from 'Vue3SfcLoader';
-import { serve } from './http.js';
+import { serve } from 'http.mjs';
 
 const options = {
     moduleCache: {
