@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { serve } from '../assets/js/http.mjs';
-// http://127.0.0.1:5500/assets/js/http.mjs
+import { serve } from 'http.mjs';
 
 async function test() {
     const res = await serve.get('https://jsonplaceholder.typicode.com/users', {});

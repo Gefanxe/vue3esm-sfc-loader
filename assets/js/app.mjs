@@ -2,10 +2,13 @@ import * as Vue from 'vue';
 import { createApp, ref } from 'vue';
 import { loadModule } from 'Vue3SfcLoader';
 import { serve } from 'http.mjs';
+import axios from 'axios';
 
 const options = {
     moduleCache: {
-        vue: Vue
+        vue: Vue,
+        axios: axios,
+        'http.mjs': { serve }
     },
     async getFile(url) {
 
